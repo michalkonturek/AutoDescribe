@@ -33,7 +33,7 @@
     assertThat(result, containsInAnyOrder(@"propertyNumber", @"propertyString", @"propertyInteger", nil));
 }
 
-- (void)test_methodListWithoutProperties {
+- (void)test_methodListOnly {
     NSArray *result = [TestDummy MK_methodListOnly];
     
     assertThat(result, hasCountOf(2));
