@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1B8C99CBA62043CDA2C93C3B"
+               BlueprintIdentifier = "1DAACF92EED949A29D30892A"
                BuildableName = "libPods-MKDebugKitTests.a"
                BlueprintName = "Pods-MKDebugKitTests"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -46,8 +46,8 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "90B02ED7181416A5001B926B"
-               BuildableName = "MKDebugKitTests.xctest"
+               BlueprintIdentifier = "90674D0118143A400039834D"
+               BuildableName = "MKDebugKitTests.octest"
                BlueprintName = "MKDebugKitTests"
                ReferencedContainer = "container:MKDebugKit.xcodeproj">
             </BuildableReference>
