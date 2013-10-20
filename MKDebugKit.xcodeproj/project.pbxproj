@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		90A1499B18141F4D00E3E251 /* NSObject+MKDebugKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A1499A18141F4D00E3E251 /* NSObject+MKDebugKit.m */; };
 		90A149A3181428A500E3E251 /* NSObject+MKDebugKit_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A149A2181428A500E3E251 /* NSObject+MKDebugKit_Tests.m */; };
+		90A149A618142A7200E3E251 /* TestDummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A149A518142A7200E3E251 /* TestDummy.m */; };
 		90B02EC1181416A5001B926B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B02EC0181416A5001B926B /* Foundation.framework */; };
 		90B02EC3181416A5001B926B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B02EC2181416A5001B926B /* CoreGraphics.framework */; };
 		90B02EC5181416A5001B926B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B02EC4181416A5001B926B /* UIKit.framework */; };
@@ -42,6 +43,8 @@
 		90A1499F1814225300E3E251 /* MKMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMacros.h; sourceTree = "<group>"; };
 		90A149A01814285000E3E251 /* Base_Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base_Test.h; sourceTree = "<group>"; };
 		90A149A2181428A500E3E251 /* NSObject+MKDebugKit_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MKDebugKit_Tests.m"; sourceTree = "<group>"; };
+		90A149A418142A7200E3E251 /* TestDummy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDummy.h; sourceTree = "<group>"; };
+		90A149A518142A7200E3E251 /* TestDummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDummy.m; sourceTree = "<group>"; };
 		90B02EBD181416A5001B926B /* MKDebugKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MKDebugKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90B02EC0181416A5001B926B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		90B02EC2181416A5001B926B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -186,6 +189,8 @@
 			isa = PBXGroup;
 			children = (
 				90A149A01814285000E3E251 /* Base_Test.h */,
+				90A149A418142A7200E3E251 /* TestDummy.h */,
+				90A149A518142A7200E3E251 /* TestDummy.m */,
 				90A149A11814285000E3E251 /* NSObject+MKDebugKit */,
 				90B02EE0181416A5001B926B /* Supporting Files */,
 			);
@@ -341,6 +346,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90A149A618142A7200E3E251 /* TestDummy.m in Sources */,
 				90A149A3181428A500E3E251 /* NSObject+MKDebugKit_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

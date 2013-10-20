@@ -22,6 +22,12 @@
     [super tearDown];
 }
 
+- (void)test_propertyList {
+    TEST_NOT_IMPLEMENTED
+}
 
+- (void)test_methodList {
+    TEST_NOT_IMPLEMENTED
+}
 
 @end
