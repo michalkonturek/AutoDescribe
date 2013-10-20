@@ -36,12 +36,34 @@
     return result;
 }
 
-+ (NSArray *)MK_methodList {
++ (NSArray *)MK_methodListWithoutProperties {
     METHOD_NOT_IMPLEMENTED
 }
 
-+ (NSArray *)MK_methodList:(Class)clazz {
++ (NSArray *)MK_methodListWithoutProperties:(Class)clazz {
     METHOD_NOT_IMPLEMENTED
+}
+
++ (NSArray *)MK_methodList {
+    return [self MK_methodList:[self class]];
+}
+
++ (NSArray *)MK_methodList:(Class)clazz {
+    NSUInteger count;
+    Method *methods = class_copyMethodList(clazz, &count);
+    
+    NSMutableArray *results = [NSMutableArray arrayWithCapacity:count];
+    for (int idx = 0; idx < count ; idx++) {
+        SEL selector = method_getName(methods[idx]);
+        [results addObject:NSStringFromSelector(selector)];
+        
+//        const char *methodName = sel_getName(selector);
+//        [results addObject:[NSString  stringWithCString:methodName encoding:NSUTF8StringEncoding]];
+    }
+    
+    free(methods);
+    
+    return results;
 }
 
 - (void)MK_printObject {

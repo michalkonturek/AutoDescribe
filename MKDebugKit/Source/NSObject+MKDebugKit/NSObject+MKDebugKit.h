@@ -13,6 +13,9 @@
 + (NSArray *)MK_propertyList;
 + (NSArray *)MK_propertyList:(Class)clazz;
 
++ (NSArray *)MK_methodListWithoutProperties;
++ (NSArray *)MK_methodListWithoutProperties:(Class)clazz;
+
 + (NSArray *)MK_methodList;
 + (NSArray *)MK_methodList:(Class)clazz;
 

@@ -18,4 +18,12 @@
     return object;
 }
 
+- (void)method_no_parameter {
+    
+}
+
+- (void)method_one_parameter:(NSString *)parameter {
+    
+}
+
 @end

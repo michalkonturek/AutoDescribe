@@ -33,8 +33,22 @@
     assertThat(result, containsInAnyOrder(@"propertyNumber", @"propertyString", @"propertyInteger", nil));
 }
 
-//- (void)test_methodList {
-//    TEST_NOT_IMPLEMENTED
-//}
+- (void)test_methodList {
+    NSArray *result = [TestDummy MK_methodList];
+    
+    NSLog(@"%@", result);
+    
+    assertThat(result, hasCountOf(9));
+    assertThat(result, containsInAnyOrder(@"method_no_parameter",
+                                          @"method_one_parameter:",
+                                          @".cxx_destruct",
+                                          @"setPropertyInteger:",
+                                          @"setPropertyNumber:",
+                                          @"setPropertyString:",
+                                          @"propertyInteger",
+                                          @"propertyNumber",
+                                          @"propertyString",
+                                          nil));
+}
 
 @end

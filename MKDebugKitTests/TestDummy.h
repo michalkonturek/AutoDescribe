@@ -16,4 +16,7 @@
 @property (nonatomic, strong) NSNumber *propertyNumber;
 @property (nonatomic, assign) NSInteger propertyInteger;
 
+- (void)method_no_parameter;
+- (void)method_one_parameter:(NSString *)parameter;
+
 @end
