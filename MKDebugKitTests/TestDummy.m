@@ -14,7 +14,7 @@
     TestDummy *object = [[[self class] alloc] init];
     object.propertyInteger = 1;
     object.propertyNumber = @1;
-    object.propertyString = @"";
+    object.propertyString = @"String value";
     return object;
 }
 

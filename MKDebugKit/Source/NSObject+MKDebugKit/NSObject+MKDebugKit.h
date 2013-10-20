@@ -13,18 +13,17 @@
 + (NSArray *)MK_propertyList;
 + (NSArray *)MK_propertyList:(Class)clazz;
 
-+ (NSArray *)MK_methodListWithoutProperties;
-+ (NSArray *)MK_methodListWithoutProperties:(Class)clazz;
++ (NSArray *)MK_methodListOnly;
++ (NSArray *)MK_methodListOnly:(Class)clazz;
 
 + (NSArray *)MK_methodList;
 + (NSArray *)MK_methodList:(Class)clazz;
 
 - (void)MK_printObject;
-
-- (void)MK_printObjectAttributes;
-- (void)MK_printObjectAttributesForKeys:(NSArray *)keys;
+- (void)MK_printObjectKeys:(NSArray *)keys;
 
 - (void)MK_printObjectMethods;
+- (void)MK_printObjectMethodsOnly;
 
 - (NSString *)MK_className;
 

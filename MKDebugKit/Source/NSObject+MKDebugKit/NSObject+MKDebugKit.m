@@ -36,12 +36,31 @@
     return result;
 }
 
-+ (NSArray *)MK_methodListWithoutProperties {
-    METHOD_NOT_IMPLEMENTED
++ (NSArray *)MK_methodListOnly {
+    return [self MK_methodListOnly:[self class]];
 }
 
-+ (NSArray *)MK_methodListWithoutProperties:(Class)clazz {
-    METHOD_NOT_IMPLEMENTED
++ (NSArray *)MK_methodListOnly:(Class)clazz {
+    NSArray *properties = [self MK_propertyList:clazz];
+    NSArray *methods = [self MK_methodList:clazz];
+    
+    NSMutableArray *result = [NSMutableArray arrayWithArray:methods];
+    NSMutableArray *without = [NSMutableArray arrayWithArray:properties];
+    
+    [without addObject:@".cxx_destruct"];
+    for (id item in properties) {
+        [without addObject:[NSString stringWithFormat:@"set%@:", item]];
+    }
+    
+    for (NSString *item in without) {
+        [result enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            if ([[item uppercaseString] isEqualToString:[obj uppercaseString]]) {
+                [result removeObject:obj];
+            }
+        }];
+    }
+    
+    return result;
 }
 
 + (NSArray *)MK_methodList {
@@ -56,9 +75,6 @@
     for (int idx = 0; idx < count ; idx++) {
         SEL selector = method_getName(methods[idx]);
         [results addObject:NSStringFromSelector(selector)];
-        
-//        const char *methodName = sel_getName(selector);
-//        [results addObject:[NSString  stringWithCString:methodName encoding:NSUTF8StringEncoding]];
     }
     
     free(methods);
@@ -67,19 +83,50 @@
 }
 
 - (void)MK_printObject {
-    METHOD_NOT_IMPLEMENTED
+    if ([self isKindOfClass:NSClassFromString(@"NSManagedObject")]) {
+        NSLog(@"%@", [self description]);
+        return;
+    }
+    
+    [self MK_printObjectKeys:[[self class] MK_propertyList]];
 }
 
-- (void)MK_printObjectAttributes {
-    METHOD_NOT_IMPLEMENTED
-}
-
-- (void)MK_printObjectAttributesForKeys:(NSArray *)keys {
-    METHOD_NOT_IMPLEMENTED
+- (void)MK_printObjectKeys:(NSArray *)keys {
+    NSString *header = @"attributes";
+    
+    NSMutableString *result = [NSMutableString string];
+    [result appendString:[NSString stringWithFormat:@"\n- - - > %@ %@: ", [self MK_className], header]];
+    
+    for (id item in keys) {
+        [result appendString:@"\n\t"];
+        [result appendString:[NSString stringWithFormat:@"%@ : %@", item, [self valueForKey:item]]];
+    }
+    
+    [result appendString:@"\n< - - -\n"];
+    
+    NSLog(@"%@", result);
 }
 
 - (void)MK_printObjectMethods {
-    METHOD_NOT_IMPLEMENTED
+    [self _printElements:[[self class] MK_methodList] withHeader:@"methods"];
+}
+
+- (void)MK_printObjectMethodsOnly {
+    [self _printElements:[[self class] MK_methodListOnly] withHeader:@"methods only"];
+}
+
+- (void)_printElements:(NSArray *)elements withHeader:(NSString *)header {
+    NSMutableString *result = [NSMutableString string];
+    [result appendString:[NSString stringWithFormat:@"\n- - - > %@ %@: ", [self MK_className], header]];
+    
+    for (id item in elements) {
+        [result appendString:@"\n\t"];
+        [result appendString:item];
+    }
+    
+    [result appendString:@"\n< - - -\n"];
+    
+    NSLog(@"%@", result);
 }
 
 - (NSString *)MK_className {
