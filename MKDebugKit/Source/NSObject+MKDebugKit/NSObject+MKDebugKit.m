@@ -53,7 +53,7 @@
     }
     
     for (NSString *item in without) {
-        [result enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        [[result copy] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             if ([[item uppercaseString] isEqualToString:[obj uppercaseString]]) {
                 [result removeObject:obj];
             }
