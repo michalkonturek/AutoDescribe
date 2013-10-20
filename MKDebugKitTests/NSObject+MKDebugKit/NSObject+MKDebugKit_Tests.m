@@ -33,8 +33,8 @@
     assertThat(result, containsInAnyOrder(@"propertyNumber", @"propertyString", @"propertyInteger", nil));
 }
 
-- (void)test_methodList {
-    TEST_NOT_IMPLEMENTED
-}
+//- (void)test_methodList {
+//    TEST_NOT_IMPLEMENTED
+//}
 
 @end
