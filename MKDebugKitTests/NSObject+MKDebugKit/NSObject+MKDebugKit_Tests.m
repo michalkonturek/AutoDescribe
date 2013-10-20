@@ -10,20 +10,27 @@
 
 @interface NSObject_MKDebugKit_Tests : SenTestCase
 
+@property (nonatomic, strong) TestDummy *test_dummy;
+
 @end
 
 @implementation NSObject_MKDebugKit_Tests
 
 - (void)setUp {
     [super setUp];
+    self.test_dummy = [TestDummy create];
 }
 
 - (void)tearDown {
+    self.test_dummy = nil;
     [super tearDown];
 }
 
 - (void)test_propertyList {
-    TEST_NOT_IMPLEMENTED
+    NSArray *result = [TestDummy MK_propertyList];
+    
+    assertThat(result, hasCountOf(3));
+    assertThat(result, containsInAnyOrder(@"propertyNumber", @"propertyString", @"propertyInteger", nil));
 }
 
 - (void)test_methodList {
