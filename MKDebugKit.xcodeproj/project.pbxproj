@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90A1499B18141F4D00E3E251 /* NSObject+MKDebugKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A1499A18141F4D00E3E251 /* NSObject+MKDebugKit.m */; };
 		90B02EC1181416A5001B926B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B02EC0181416A5001B926B /* Foundation.framework */; };
 		90B02EC3181416A5001B926B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B02EC2181416A5001B926B /* CoreGraphics.framework */; };
 		90B02EC5181416A5001B926B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B02EC4181416A5001B926B /* UIKit.framework */; };
@@ -34,6 +35,10 @@
 /* Begin PBXFileReference section */
 		2C5011315B6249E792769238 /* Pods-MKDebugKitTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MKDebugKitTests.xcconfig"; path = "Pods/Pods-MKDebugKitTests.xcconfig"; sourceTree = "<group>"; };
 		7B6E773EB8F64AF69D39235D /* libPods-MKDebugKitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MKDebugKitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		90A1499918141F4D00E3E251 /* NSObject+MKDebugKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MKDebugKit.h"; sourceTree = "<group>"; };
+		90A1499A18141F4D00E3E251 /* NSObject+MKDebugKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MKDebugKit.m"; sourceTree = "<group>"; };
+		90A1499C181420A900E3E251 /* MKDebugKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKDebugKit.h; sourceTree = "<group>"; };
+		90A1499F1814225300E3E251 /* MKMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMacros.h; sourceTree = "<group>"; };
 		90B02EBD181416A5001B926B /* MKDebugKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MKDebugKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90B02EC0181416A5001B926B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		90B02EC2181416A5001B926B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -76,6 +81,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		90A1499418141E7000E3E251 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				90A1499518141E7000E3E251 /* Externals */,
+				90A1499618141E7000E3E251 /* MKLog */,
+				90A1499818141F3300E3E251 /* NSObject+MKDebugKit */,
+				90A1499C181420A900E3E251 /* MKDebugKit.h */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		90A1499518141E7000E3E251 /* Externals */ = {
+			isa = PBXGroup;
+			children = (
+				90A1499F1814225300E3E251 /* MKMacros.h */,
+			);
+			path = Externals;
+			sourceTree = "<group>";
+		};
+		90A1499618141E7000E3E251 /* MKLog */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MKLog;
+			sourceTree = "<group>";
+		};
+		90A1499818141F3300E3E251 /* NSObject+MKDebugKit */ = {
+			isa = PBXGroup;
+			children = (
+				90A1499918141F4D00E3E251 /* NSObject+MKDebugKit.h */,
+				90A1499A18141F4D00E3E251 /* NSObject+MKDebugKit.m */,
+			);
+			path = "NSObject+MKDebugKit";
+			sourceTree = "<group>";
+		};
 		90B02EB4181416A5001B926B = {
 			isa = PBXGroup;
 			children = (
@@ -111,9 +151,10 @@
 		90B02EC6181416A5001B926B /* MKDebugKit */ = {
 			isa = PBXGroup;
 			children = (
+				90A1499418141E7000E3E251 /* Source */,
+				90B02ED2181416A5001B926B /* Images.xcassets */,
 				90B02ECF181416A5001B926B /* AppDelegate.h */,
 				90B02ED0181416A5001B926B /* AppDelegate.m */,
-				90B02ED2181416A5001B926B /* Images.xcassets */,
 				90B02EC7181416A5001B926B /* Supporting Files */,
 			);
 			path = MKDebugKit;
@@ -279,6 +320,7 @@
 			files = (
 				90B02ED1181416A5001B926B /* AppDelegate.m in Sources */,
 				90B02ECD181416A5001B926B /* main.m in Sources */,
+				90A1499B18141F4D00E3E251 /* NSObject+MKDebugKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,7 +364,7 @@
 		90B02EE7181416A5001B926B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -355,13 +397,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**/**";
 			};
 			name = Debug;
 		};
 		90B02EE8181416A5001B926B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -387,6 +430,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**/**";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
