@@ -8,14 +8,32 @@
 
 #import "NSObject+MKDebugKit.h"
 
+#import <objc/runtime.h>
+
 @implementation NSObject (MKDebugKit)
 
 + (NSArray *)MK_propertyList {
-    METHOD_NOT_IMPLEMENTED
+    return [self MK_propertyList:[self class]];
 }
 
 + (NSArray *)MK_propertyList:(Class)clazz {
-    METHOD_NOT_IMPLEMENTED
+    NSUInteger count;
+    objc_property_t *propertyList = class_copyPropertyList(clazz, &count);
+    
+    NSMutableArray *result = [NSMutableArray arrayWithCapacity:count];
+    for (NSInteger idx = 0; idx < count; idx++ ) {
+        
+        objc_property_t property = propertyList[idx];
+        const char *propertyName = property_getName(property);
+        
+        if (propertyName) {
+            [result addObject:[NSString stringWithCString:propertyName encoding:NSUTF8StringEncoding]];
+        }
+    }
+    
+    free(propertyList);
+    
+    return result;
 }
 
 + (NSArray *)MK_methodList {
