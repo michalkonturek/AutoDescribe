@@ -7,15 +7,16 @@
 
 MKDebugKit provides enhanced debuggin tools for iOS applications.
 
-It contains:
-
 * [NSObject+MKDebugKit](#NSObject+MKDebugKit)
 * [MKLog](#MKLog)
 
 
 ## NSObject+MKDebugKit
 
-This category provides set of methods for printing usefull information about object instance and class.
+This category extends `NSObject` with methods for acquisition of lists of properties and methods.
+It also enables objects to print their properties and values without the need of writing never-ending
+`NSLog` statements.
+
 
 ```objc
 @interface TestDummy : NSObject
@@ -31,7 +32,6 @@ This category provides set of methods for printing usefull information about obj
 
 @end
 ```
-
 
 ```objc
 TestDummy *object = [[[self class] alloc] init];
