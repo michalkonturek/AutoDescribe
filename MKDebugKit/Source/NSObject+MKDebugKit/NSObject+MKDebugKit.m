@@ -115,6 +115,14 @@
     [self _printElements:[[self class] MK_methodListOnly] withHeader:@"methods only"];
 }
 
+
+- (void)_printElements:(NSArray *)elements
+            withHeader:(NSString *)header withBlock:(void (^)(id item, id result))block {
+    
+    METHOD_NOT_IMPLEMENTED
+}
+
+
 - (void)_printElements:(NSArray *)elements withHeader:(NSString *)header {
     NSMutableString *result = [NSMutableString string];
     [result appendString:[NSString stringWithFormat:@"\n- - - > %@ %@: ", [self MK_className], header]];
