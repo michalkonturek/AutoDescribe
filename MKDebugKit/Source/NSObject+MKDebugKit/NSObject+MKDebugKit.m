@@ -92,36 +92,40 @@
 }
 
 - (void)MK_printObjectKeys:(NSArray *)keys {
-    NSString *header = @"attributes";
     
-    NSMutableString *result = [NSMutableString string];
-    [result appendString:[NSString stringWithFormat:@"\n- - - > %@ %@: ", [self MK_className], header]];
-    
-    for (id item in keys) {
-        [result appendString:@"\n\t"];
-        [result appendString:[NSString stringWithFormat:@"%@ : %@", item, [self valueForKey:item]]];
-    }
-    
-    [result appendString:@"\n< - - -\n"];
-    
-    NSLog(@"%@", result);
+    __block NSObject *blockSelf = self;
+    [self _printElements:keys
+              withHeader:@"attributes" withBlock:^(id item, id result) {
+                  [result appendString:@"\n\t"];
+                  [result appendString:[NSString stringWithFormat:@"%@ : %@",
+                                        item, [blockSelf valueForKey:item]]];
+              }];
 }
 
 - (void)MK_printObjectMethods {
-    [self _printElements:[[self class] MK_methodList] withHeader:@"methods"];
+    [self _printElements:[[self class] MK_methodList]
+              withHeader:@"methods" withBlock:^(id item, id result) {
+                  [result appendString:@"\n\t"];
+                  [result appendString:item];
+    }];
 }
 
 - (void)MK_printObjectMethodsOnly {
-    [self _printElements:[[self class] MK_methodListOnly] withHeader:@"methods only"];
+    [self _printElements:[[self class] MK_methodListOnly]
+              withHeader:@"methods only" withBlock:^(id item, id result) {
+                  [result appendString:@"\n\t"];
+                  [result appendString:item];
+    }];
 }
 
-- (void)_printElements:(NSArray *)elements withHeader:(NSString *)header {
-    NSMutableString *result = [NSMutableString string];
+- (void)_printElements:(NSArray *)elements
+            withHeader:(NSString *)header withBlock:(void (^)(id item, id result))block {
+    
+    __block NSMutableString *result = [NSMutableString string];
     [result appendString:[NSString stringWithFormat:@"\n- - - > %@ %@: ", [self MK_className], header]];
     
     for (id item in elements) {
-        [result appendString:@"\n\t"];
-        [result appendString:item];
+        block(item, result);
     }
     
     [result appendString:@"\n< - - -\n"];
