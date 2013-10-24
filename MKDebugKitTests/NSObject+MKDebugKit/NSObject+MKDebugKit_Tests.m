@@ -31,6 +31,8 @@
     
     assertThat(result, hasCountOf(3));
     assertThat(result, containsInAnyOrder(@"propertyNumber", @"propertyString", @"propertyInteger", nil));
+    
+    [[TestDummy create] MK_printObject];
 }
 
 - (void)test_methodListOnly {
@@ -40,6 +42,8 @@
     assertThat(result, containsInAnyOrder(@"method_no_parameter",
                                           @"method_one_parameter:",
                                           nil));
+    
+    [[TestDummy create] MK_printObjectMethodsOnly];
 }
 
 - (void)test_methodList {
@@ -56,6 +60,8 @@
                                           @"propertyNumber",
                                           @"propertyString",
                                           nil));
+    
+    [[TestDummy create] MK_printObjectMethods];
 }
 
 @end
