@@ -45,3 +45,8 @@ object.propertyString = @"String value";
 
 MKLog is a replacement for `NSLog`.
 
+
+- - - 
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/michalkonturek/mkdebugkit/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
