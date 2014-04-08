@@ -8,11 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		6476637F1CB04E40BAFA3A45 /* libPods-MKDebugKitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B6E773EB8F64AF69D39235D /* libPods-MKDebugKitTests.a */; };
-		90674D0318143A400039834D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90674CFA18142ECC0039834D /* SenTestingKit.framework */; };
 		90674D0418143A400039834D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B02EC0181416A5001B926B /* Foundation.framework */; };
 		90674D0518143A400039834D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B02EC4181416A5001B926B /* UIKit.framework */; };
 		90674D0B18143A400039834D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 90674D0918143A400039834D /* InfoPlist.strings */; };
-		90A1499B18141F4D00E3E251 /* NSObject+MKDebugKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A1499A18141F4D00E3E251 /* NSObject+MKDebugKit.m */; };
 		90A214F618143B4300CA146B /* TestDummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A149A518142A7200E3E251 /* TestDummy.m */; };
 		90A214F718143B4300CA146B /* NSObject+MKDebugKit_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A149A2181428A500E3E251 /* NSObject+MKDebugKit_Tests.m */; };
 		90B02EC1181416A5001B926B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B02EC0181416A5001B926B /* Foundation.framework */; };
@@ -22,6 +20,7 @@
 		90B02ECD181416A5001B926B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B02ECC181416A5001B926B /* main.m */; };
 		90B02ED1181416A5001B926B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B02ED0181416A5001B926B /* AppDelegate.m */; };
 		90B02ED3181416A5001B926B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90B02ED2181416A5001B926B /* Images.xcassets */; };
+		C47EE96EC9E1450DB38DE160 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0C87C8136F482881B42986 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,14 +35,12 @@
 
 /* Begin PBXFileReference section */
 		2C5011315B6249E792769238 /* Pods-MKDebugKitTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MKDebugKitTests.xcconfig"; path = "Pods/Pods-MKDebugKitTests.xcconfig"; sourceTree = "<group>"; };
+		4D0C87C8136F482881B42986 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B6E773EB8F64AF69D39235D /* libPods-MKDebugKitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MKDebugKitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		90674CFA18142ECC0039834D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		90674D0218143A400039834D /* MKDebugKitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MKDebugKitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		90674D0218143A400039834D /* MKDebugKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MKDebugKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		90674D0818143A400039834D /* MKDebugKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MKDebugKitTests-Info.plist"; sourceTree = "<group>"; };
 		90674D0A18143A400039834D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		90674D0E18143A400039834D /* MKDebugKitTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MKDebugKitTests-Prefix.pch"; sourceTree = "<group>"; };
-		90A1499918141F4D00E3E251 /* NSObject+MKDebugKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MKDebugKit.h"; sourceTree = "<group>"; };
-		90A1499A18141F4D00E3E251 /* NSObject+MKDebugKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MKDebugKit.m"; sourceTree = "<group>"; };
 		90A1499C181420A900E3E251 /* MKDebugKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKDebugKit.h; sourceTree = "<group>"; };
 		90A1499F1814225300E3E251 /* MKMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMacros.h; sourceTree = "<group>"; };
 		90A149A01814285000E3E251 /* Base_Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base_Test.h; sourceTree = "<group>"; };
@@ -61,6 +58,7 @@
 		90B02ECF181416A5001B926B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		90B02ED0181416A5001B926B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		90B02ED2181416A5001B926B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BEA606034FD545F8A274CE53 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +66,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90674D0318143A400039834D /* SenTestingKit.framework in Frameworks */,
 				90674D0518143A400039834D /* UIKit.framework in Frameworks */,
 				90674D0418143A400039834D /* Foundation.framework in Frameworks */,
 				6476637F1CB04E40BAFA3A45 /* libPods-MKDebugKitTests.a in Frameworks */,
@@ -82,6 +79,7 @@
 				90B02EC3181416A5001B926B /* CoreGraphics.framework in Frameworks */,
 				90B02EC5181416A5001B926B /* UIKit.framework in Frameworks */,
 				90B02EC1181416A5001B926B /* Foundation.framework in Frameworks */,
+				C47EE96EC9E1450DB38DE160 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,7 +113,6 @@
 			children = (
 				90A1499518141E7000E3E251 /* Externals */,
 				90A1499618141E7000E3E251 /* MKLog */,
-				90A1499818141F3300E3E251 /* NSObject+MKDebugKit */,
 				90A1499C181420A900E3E251 /* MKDebugKit.h */,
 			);
 			path = Source;
@@ -136,15 +133,6 @@
 			path = MKLog;
 			sourceTree = "<group>";
 		};
-		90A1499818141F3300E3E251 /* NSObject+MKDebugKit */ = {
-			isa = PBXGroup;
-			children = (
-				90A1499918141F4D00E3E251 /* NSObject+MKDebugKit.h */,
-				90A1499A18141F4D00E3E251 /* NSObject+MKDebugKit.m */,
-			);
-			path = "NSObject+MKDebugKit";
-			sourceTree = "<group>";
-		};
 		90A149A11814285000E3E251 /* NSObject+MKDebugKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +149,7 @@
 				90B02EBF181416A5001B926B /* Frameworks */,
 				90B02EBE181416A5001B926B /* Products */,
 				2C5011315B6249E792769238 /* Pods-MKDebugKitTests.xcconfig */,
+				BEA606034FD545F8A274CE53 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -168,7 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				90B02EBD181416A5001B926B /* MKDebugKit.app */,
-				90674D0218143A400039834D /* MKDebugKitTests.octest */,
+				90674D0218143A400039834D /* MKDebugKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -176,11 +165,11 @@
 		90B02EBF181416A5001B926B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				90674CFA18142ECC0039834D /* SenTestingKit.framework */,
 				90B02EC0181416A5001B926B /* Foundation.framework */,
 				90B02EC2181416A5001B926B /* CoreGraphics.framework */,
 				90B02EC4181416A5001B926B /* UIKit.framework */,
 				7B6E773EB8F64AF69D39235D /* libPods-MKDebugKitTests.a */,
+				4D0C87C8136F482881B42986 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -228,16 +217,18 @@
 			);
 			name = MKDebugKitTests;
 			productName = MKDebugKitTests;
-			productReference = 90674D0218143A400039834D /* MKDebugKitTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productReference = 90674D0218143A400039834D /* MKDebugKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		90B02EBC181416A5001B926B /* MKDebugKit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90B02EE9181416A5001B926B /* Build configuration list for PBXNativeTarget "MKDebugKit" */;
 			buildPhases = (
+				F0436A5ADEF947058BBD999F /* Check Pods Manifest.lock */,
 				90B02EB9181416A5001B926B /* Sources */,
 				90B02EBA181416A5001B926B /* Frameworks */,
 				90B02EBB181416A5001B926B /* Resources */,
+				05AE822D02D242E9BE7C7D1E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,6 +245,7 @@
 		90B02EB5181416A5001B926B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastTestingUpgradeCheck = 0510;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Michal Konturek";
 				TargetAttributes = {
@@ -301,6 +293,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		05AE822D02D242E9BE7C7D1E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8F515A97C9CD4EECBEF3C66B /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -317,6 +324,21 @@
 			showEnvVarsInLog = 0;
 		};
 		B1BE8B5840454A0E9F591607 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F0436A5ADEF947058BBD999F /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -349,7 +371,6 @@
 			files = (
 				90B02ED1181416A5001B926B /* AppDelegate.m in Sources */,
 				90B02ECD181416A5001B926B /* main.m in Sources */,
-				90A1499B18141F4D00E3E251 /* NSObject+MKDebugKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,7 +425,6 @@
 				INFOPLIST_FILE = "MKDebugKitTests/MKDebugKitTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -425,7 +445,6 @@
 				INFOPLIST_FILE = "MKDebugKitTests/MKDebugKitTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -506,6 +525,7 @@
 		};
 		90B02EEA181416A5001B926B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEA606034FD545F8A274CE53 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -519,6 +539,7 @@
 		};
 		90B02EEB181416A5001B926B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEA606034FD545F8A274CE53 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

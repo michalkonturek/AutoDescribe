@@ -1,23 +1,40 @@
 //
-//  NSObject+MKDebugKit.m
-//  MKDebugKit
+//  NSObject+MK_AutoDescribe.m
+//  MKFoundation
 //
-//  Created by Michal Konturek on 20/10/2013.
-//  Copyright (c) 2013 Michal Konturek. All rights reserved.
+//  Copyright (c) 2013 Michal Konturek
+//
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  THE SOFTWARE.
 //
 
-#import "NSObject+MKDebugKit.h"
+#import "NSObject+MK_AutoDescribe.h"
 
 #import <objc/runtime.h>
 
-@implementation NSObject (MKDebugKit)
+@implementation NSObject (MK_AutoDescribe)
 
-+ (NSArray *)MK_propertyList {
-    return [self MK_propertyList:[self class]];
++ (NSArray *)mk_propertyList {
+    return [self mk_propertyList:[self class]];
 }
 
-+ (NSArray *)MK_propertyList:(Class)clazz {
-    NSUInteger count;
++ (NSArray *)mk_propertyList:(Class)clazz {
+    unsigned int count;
     objc_property_t *propertyList = class_copyPropertyList(clazz, &count);
     
     NSMutableArray *result = [NSMutableArray arrayWithCapacity:count];
@@ -36,13 +53,13 @@
     return result;
 }
 
-+ (NSArray *)MK_methodListOnly {
-    return [self MK_methodListOnly:[self class]];
++ (NSArray *)mk_methodListOnly {
+    return [self mk_methodListOnly:[self class]];
 }
 
-+ (NSArray *)MK_methodListOnly:(Class)clazz {
-    NSArray *properties = [self MK_propertyList:clazz];
-    NSArray *methods = [self MK_methodList:clazz];
++ (NSArray *)mk_methodListOnly:(Class)clazz {
+    NSArray *properties = [self mk_propertyList:clazz];
+    NSArray *methods = [self mk_methodList:clazz];
     
     NSMutableArray *result = [NSMutableArray arrayWithArray:methods];
     NSMutableArray *without = [NSMutableArray arrayWithArray:properties];
@@ -63,12 +80,12 @@
     return result;
 }
 
-+ (NSArray *)MK_methodList {
-    return [self MK_methodList:[self class]];
++ (NSArray *)mk_methodList {
+    return [self mk_methodList:[self class]];
 }
 
-+ (NSArray *)MK_methodList:(Class)clazz {
-    NSUInteger count;
++ (NSArray *)mk_methodList:(Class)clazz {
+    unsigned int count;
     Method *methods = class_copyMethodList(clazz, &count);
     
     NSMutableArray *results = [NSMutableArray arrayWithCapacity:count];
@@ -82,16 +99,16 @@
     return results;
 }
 
-- (void)MK_printObject {
+- (void)mk_printObject {
     if ([self isKindOfClass:NSClassFromString(@"NSManagedObject")]) {
         NSLog(@"%@", [self description]);
         return;
     }
     
-    [self MK_printObjectKeys:[[self class] MK_propertyList]];
+    [self mk_printObjectKeys:[[self class] mk_propertyList]];
 }
 
-- (void)MK_printObjectKeys:(NSArray *)keys {
+- (void)mk_printObjectKeys:(NSArray *)keys {
     
     __block NSObject *blockSelf = self;
     [self _printElements:keys
@@ -102,16 +119,16 @@
               }];
 }
 
-- (void)MK_printObjectMethods {
-    [self _printElements:[[self class] MK_methodList]
+- (void)mk_printObjectMethods {
+    [self _printElements:[[self class] mk_methodList]
               withHeader:@"methods" withBlock:^(id item, id result) {
                   [result appendString:@"\n\t"];
                   [result appendString:item];
     }];
 }
 
-- (void)MK_printObjectMethodsOnly {
-    [self _printElements:[[self class] MK_methodListOnly]
+- (void)mk_printObjectMethodsOnly {
+    [self _printElements:[[self class] mk_methodListOnly]
               withHeader:@"methods only" withBlock:^(id item, id result) {
                   [result appendString:@"\n\t"];
                   [result appendString:item];
@@ -122,7 +139,7 @@
             withHeader:(NSString *)header withBlock:(void (^)(id item, id result))block {
     
     __block NSMutableString *result = [NSMutableString string];
-    [result appendString:[NSString stringWithFormat:@"\n- - - > %@ %@: ", [self MK_className], header]];
+    [result appendString:[NSString stringWithFormat:@"\n- - - > %@ %@: ", [self mk_className], header]];
     
     for (id item in elements) {
         block(item, result);
@@ -133,7 +150,7 @@
     NSLog(@"%@", result);
 }
 
-- (NSString *)MK_className {
+- (NSString *)mk_className {
     return NSStringFromClass([self class]);
 }
 
