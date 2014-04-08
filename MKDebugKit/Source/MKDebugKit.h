@@ -6,8 +6,7 @@
 //  Copyright (c) 2013 Michal Konturek. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 #import "MKMacros.h"
-#import "NSObject+MKDebugKit.h"
+
+#import <MKFoundationKit/NSObject+MK_AutoDescribe.h>
 

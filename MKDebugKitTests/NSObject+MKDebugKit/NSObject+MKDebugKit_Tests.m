@@ -27,27 +27,27 @@
 }
 
 - (void)test_propertyList {
-    NSArray *result = [TestDummy MK_propertyList];
+    NSArray *result = [TestDummy mk_propertyList];
     
     assertThat(result, hasCountOf(3));
     assertThat(result, containsInAnyOrder(@"propertyNumber", @"propertyString", @"propertyInteger", nil));
     
-    [[TestDummy create] MK_printObject];
+    [[TestDummy create] mk_printObject];
 }
 
 - (void)test_methodListOnly {
-    NSArray *result = [TestDummy MK_methodListOnly];
+    NSArray *result = [TestDummy mk_methodListOnly];
     
     assertThat(result, hasCountOf(2));
     assertThat(result, containsInAnyOrder(@"method_no_parameter",
                                           @"method_one_parameter:",
                                           nil));
     
-    [[TestDummy create] MK_printObjectMethodsOnly];
+    [[TestDummy create] mk_printObjectMethodsOnly];
 }
 
 - (void)test_methodList {
-    NSArray *result = [TestDummy MK_methodList];
+    NSArray *result = [TestDummy mk_methodList];
     
     assertThat(result, hasCountOf(9));
     assertThat(result, containsInAnyOrder(@"method_no_parameter",
@@ -61,7 +61,7 @@
                                           @"propertyString",
                                           nil));
     
-    [[TestDummy create] MK_printObjectMethods];
+    [[TestDummy create] mk_printObjectMethods];
 }
 
 @end
