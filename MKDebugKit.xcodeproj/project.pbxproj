@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6476637F1CB04E40BAFA3A45 /* libPods-MKDebugKitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B6E773EB8F64AF69D39235D /* libPods-MKDebugKitTests.a */; };
-		90674D0318143A400039834D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90674CFA18142ECC0039834D /* SenTestingKit.framework */; };
 		90674D0418143A400039834D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B02EC0181416A5001B926B /* Foundation.framework */; };
 		90674D0518143A400039834D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B02EC4181416A5001B926B /* UIKit.framework */; };
 		90674D0B18143A400039834D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 90674D0918143A400039834D /* InfoPlist.strings */; };
@@ -38,8 +37,7 @@
 		2C5011315B6249E792769238 /* Pods-MKDebugKitTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MKDebugKitTests.xcconfig"; path = "Pods/Pods-MKDebugKitTests.xcconfig"; sourceTree = "<group>"; };
 		4D0C87C8136F482881B42986 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B6E773EB8F64AF69D39235D /* libPods-MKDebugKitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MKDebugKitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		90674CFA18142ECC0039834D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		90674D0218143A400039834D /* MKDebugKitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MKDebugKitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		90674D0218143A400039834D /* MKDebugKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MKDebugKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		90674D0818143A400039834D /* MKDebugKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MKDebugKitTests-Info.plist"; sourceTree = "<group>"; };
 		90674D0A18143A400039834D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		90674D0E18143A400039834D /* MKDebugKitTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MKDebugKitTests-Prefix.pch"; sourceTree = "<group>"; };
@@ -68,7 +66,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90674D0318143A400039834D /* SenTestingKit.framework in Frameworks */,
 				90674D0518143A400039834D /* UIKit.framework in Frameworks */,
 				90674D0418143A400039834D /* Foundation.framework in Frameworks */,
 				6476637F1CB04E40BAFA3A45 /* libPods-MKDebugKitTests.a in Frameworks */,
@@ -160,7 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				90B02EBD181416A5001B926B /* MKDebugKit.app */,
-				90674D0218143A400039834D /* MKDebugKitTests.octest */,
+				90674D0218143A400039834D /* MKDebugKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,7 +165,6 @@
 		90B02EBF181416A5001B926B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				90674CFA18142ECC0039834D /* SenTestingKit.framework */,
 				90B02EC0181416A5001B926B /* Foundation.framework */,
 				90B02EC2181416A5001B926B /* CoreGraphics.framework */,
 				90B02EC4181416A5001B926B /* UIKit.framework */,
@@ -221,8 +217,8 @@
 			);
 			name = MKDebugKitTests;
 			productName = MKDebugKitTests;
-			productReference = 90674D0218143A400039834D /* MKDebugKitTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productReference = 90674D0218143A400039834D /* MKDebugKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		90B02EBC181416A5001B926B /* MKDebugKit */ = {
 			isa = PBXNativeTarget;
@@ -429,7 +425,6 @@
 				INFOPLIST_FILE = "MKDebugKitTests/MKDebugKitTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -450,7 +445,6 @@
 				INFOPLIST_FILE = "MKDebugKitTests/MKDebugKitTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};

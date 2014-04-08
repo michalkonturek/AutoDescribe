@@ -8,7 +8,7 @@
 
 #import "Base_Test.h"
 
-@interface NSObject_MKDebugKit_Tests : SenTestCase
+@interface NSObject_MKDebugKit_Tests : XCTestCase
 
 @property (nonatomic, strong) TestDummy *test_dummy;
 
