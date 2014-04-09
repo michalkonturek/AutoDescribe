@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6476637F1CB04E40BAFA3A45 /* libPods-MKDebugKitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B6E773EB8F64AF69D39235D /* libPods-MKDebugKitTests.a */; };
+		84FC9E2D18F4C57400405FBE /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 84FC9E2C18F4C57400405FBE /* .gitkeep */; };
 		90674D0418143A400039834D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B02EC0181416A5001B926B /* Foundation.framework */; };
 		90674D0518143A400039834D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B02EC4181416A5001B926B /* UIKit.framework */; };
 		90674D0B18143A400039834D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 90674D0918143A400039834D /* InfoPlist.strings */; };
@@ -37,12 +38,12 @@
 		2C5011315B6249E792769238 /* Pods-MKDebugKitTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MKDebugKitTests.xcconfig"; path = "Pods/Pods-MKDebugKitTests.xcconfig"; sourceTree = "<group>"; };
 		4D0C87C8136F482881B42986 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B6E773EB8F64AF69D39235D /* libPods-MKDebugKitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MKDebugKitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84FC9E2A18F4C57400405FBE /* MKDebugKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKDebugKit.h; sourceTree = "<group>"; };
+		84FC9E2C18F4C57400405FBE /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		90674D0218143A400039834D /* MKDebugKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MKDebugKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		90674D0818143A400039834D /* MKDebugKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MKDebugKitTests-Info.plist"; sourceTree = "<group>"; };
 		90674D0A18143A400039834D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		90674D0E18143A400039834D /* MKDebugKitTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MKDebugKitTests-Prefix.pch"; sourceTree = "<group>"; };
-		90A1499C181420A900E3E251 /* MKDebugKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKDebugKit.h; sourceTree = "<group>"; };
-		90A1499F1814225300E3E251 /* MKMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMacros.h; sourceTree = "<group>"; };
 		90A149A01814285000E3E251 /* Base_Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base_Test.h; sourceTree = "<group>"; };
 		90A149A2181428A500E3E251 /* NSObject+MKDebugKit_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MKDebugKit_Tests.m"; sourceTree = "<group>"; };
 		90A149A418142A7200E3E251 /* TestDummy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDummy.h; sourceTree = "<group>"; };
@@ -86,6 +87,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84FC9E2918F4C57400405FBE /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				84FC9E2A18F4C57400405FBE /* MKDebugKit.h */,
+				84FC9E2B18F4C57400405FBE /* MKLog */,
+			);
+			name = Source;
+			path = ../../Source;
+			sourceTree = "<group>";
+		};
+		84FC9E2B18F4C57400405FBE /* MKLog */ = {
+			isa = PBXGroup;
+			children = (
+				84FC9E2C18F4C57400405FBE /* .gitkeep */,
+			);
+			path = MKLog;
+			sourceTree = "<group>";
+		};
 		90674D0618143A400039834D /* MKDebugKitTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,31 +125,6 @@
 				90674D0E18143A400039834D /* MKDebugKitTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		90A1499418141E7000E3E251 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				90A1499518141E7000E3E251 /* Externals */,
-				90A1499618141E7000E3E251 /* MKLog */,
-				90A1499C181420A900E3E251 /* MKDebugKit.h */,
-			);
-			path = Source;
-			sourceTree = "<group>";
-		};
-		90A1499518141E7000E3E251 /* Externals */ = {
-			isa = PBXGroup;
-			children = (
-				90A1499F1814225300E3E251 /* MKMacros.h */,
-			);
-			path = Externals;
-			sourceTree = "<group>";
-		};
-		90A1499618141E7000E3E251 /* MKLog */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MKLog;
 			sourceTree = "<group>";
 		};
 		90A149A11814285000E3E251 /* NSObject+MKDebugKit */ = {
@@ -177,7 +171,7 @@
 		90B02EC6181416A5001B926B /* MKDebugKit */ = {
 			isa = PBXGroup;
 			children = (
-				90A1499418141E7000E3E251 /* Source */,
+				84FC9E2918F4C57400405FBE /* Source */,
 				90B02ED2181416A5001B926B /* Images.xcassets */,
 				90B02ECF181416A5001B926B /* AppDelegate.h */,
 				90B02ED0181416A5001B926B /* AppDelegate.m */,
@@ -285,6 +279,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84FC9E2D18F4C57400405FBE /* .gitkeep in Resources */,
 				90B02ECB181416A5001B926B /* InfoPlist.strings in Resources */,
 				90B02ED3181416A5001B926B /* Images.xcassets in Resources */,
 			);

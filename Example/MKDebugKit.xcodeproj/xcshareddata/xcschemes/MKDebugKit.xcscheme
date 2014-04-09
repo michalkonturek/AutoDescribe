@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8EE9A5C8AB514FED9B06308C"
+               BlueprintIdentifier = "1022CD4D257940F89BD48218"
                BuildableName = "libPods-MKDebugKitTests.a"
                BlueprintName = "Pods-MKDebugKitTests"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -47,7 +47,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "90674D0118143A400039834D"
-               BuildableName = "MKDebugKitTests.octest"
+               BuildableName = "MKDebugKitTests.xctest"
                BlueprintName = "MKDebugKitTests"
                ReferencedContainer = "container:MKDebugKit.xcodeproj">
             </BuildableReference>
