@@ -8,6 +8,8 @@ before_install:
     - pod --version
     #- xcpretty --version
 
+    - cd Example
+
 script: make ci
 
 notifications:

@@ -7,11 +7,11 @@
 
 MKDebugKit provides enhanced debuggin tools for iOS applications.
 
-* [NSObject+MKDebugKit](#NSObject+MKDebugKit)
-* [MKLog](#MKLog)
+* [NSObject+AutoDescribe](#nsobjectautodescribe)
+* [MKLog](#mklog)
 
 
-## NSObject+MKDebugKit
+## NSObject+AutoDescribe
 
 This category extends `NSObject` with methods for acquisition of lists of properties and methods.
 It also enables objects to print their properties and values without the need of writing never-ending
