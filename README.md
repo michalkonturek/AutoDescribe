@@ -7,8 +7,8 @@
 
 MKDebugKit provides enhanced debuggin tools for iOS applications.
 
-* [NSObject+AutoDescribe](#NSObject+AutoDescribe)
-* [MKLog](#MKLog)
+* [NSObject+AutoDescribe](#nsobjectautodescribe)
+* [MKLog](#mklog)
 
 
 ## NSObject+AutoDescribe
