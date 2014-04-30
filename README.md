@@ -20,7 +20,9 @@ Source code of this project is available under the standard MIT license. Please 
 
 ## Installation
 
-The source files have been moved to `MKFoundationKit` pod. 
+The source files have been moved to [`MKFoundationKit`][MKF] pod. 
+
+[MKF]:https://github.com/michalkonturek/mkfoundationkit
 
 1. Add to your Podfile:
 
