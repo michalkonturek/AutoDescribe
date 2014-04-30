@@ -1,17 +1,21 @@
-# MKDebugKit
+# AutoDescribe
 
-[![License MIT](https://go-shields.herokuapp.com/license-MIT-blue.png)](https://github.com/michalkonturek/MKDebugKit/blob/master/LICENSE)
-[![Build Platform](https://cocoapod-badges.herokuapp.com/p/MKDebugKit/badge.png)](https://github.com/michalkonturek/MKDebugKit)
-[![Build Version](https://cocoapod-badges.herokuapp.com/v/MKDebugKit/badge.png)](https://github.com/michalkonturek/MKDebugKit)
-[![Build Status](https://travis-ci.org/michalkonturek/MKDebugKit.png?branch=master)](https://travis-ci.org/michalkonturek/MKDebugKit)
+[![Twitter](https://img.shields.io/badge/contact-@MichalKonturek-blue.svg?style=flat)](http://twitter.com/michalkonturek)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/michalkonturek/AutoDescribe/blob/master/LICENSE)
+[![Build Status](http://img.shields.io/travis/michalkonturek/AutoDescribe.svg?style=flat)](https://travis-ci.org/michalkonturek/AutoDescribe)
 
-MKDebugKit provides enhanced debuggin tools for iOS applications.
-
-* [NSObject+AutoDescribe](#nsobjectautodescribe)
-* [MKLog](#mklog)
+AutoDescribe is a category on NSObject allowing to query information about an instance.
 
 
-## NSObject+AutoDescribe
+## License
+
+Source code of this project is available under the standard MIT license. Please see [the license file][LICENSE].
+
+[PODS]:http://cocoapods.org/
+[LICENSE]:https://github.com/michalkonturek/AutoDescribe/blob/master/LICENSE
+
+
+## Usage
 
 This category extends `NSObject` with methods for acquisition of lists of properties and methods.
 It also enables objects to print their properties and values without the need of writing never-ending
@@ -41,12 +45,5 @@ object.propertyString = @"String value";
 ```
 
 
-## MKLog
 
-MKLog is a replacement for `NSLog`.
-
-
-<!--- - - 
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/michalkonturek/mkdebugkit/trend.png)](https://bitdeli.com/free "Bitdeli Badge")-->
 
