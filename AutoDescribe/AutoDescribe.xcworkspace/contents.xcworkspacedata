@@ -5,6 +5,6 @@
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:MKDebugKit.xcodeproj">
+      location = "group:AutoDescribe.xcodeproj">
    </FileRef>
 </Workspace>

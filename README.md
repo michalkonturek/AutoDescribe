@@ -1,52 +1,57 @@
-# MKDebugKit
+# AutoDescribe
 
-[![License MIT](https://go-shields.herokuapp.com/license-MIT-blue.png)](https://github.com/michalkonturek/MKDebugKit/blob/master/LICENSE)
-[![Build Platform](https://cocoapod-badges.herokuapp.com/p/MKDebugKit/badge.png)](https://github.com/michalkonturek/MKDebugKit)
-[![Build Version](https://cocoapod-badges.herokuapp.com/v/MKDebugKit/badge.png)](https://github.com/michalkonturek/MKDebugKit)
-[![Build Status](https://travis-ci.org/michalkonturek/MKDebugKit.png?branch=master)](https://travis-ci.org/michalkonturek/MKDebugKit)
+[![Twitter](https://img.shields.io/badge/contact-@MichalKonturek-blue.svg?style=flat)](http://twitter.com/michalkonturek)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/michalkonturek/AutoDescribe/blob/master/LICENSE)
+[![Build Status](http://img.shields.io/travis/michalkonturek/AutoDescribe.svg?style=flat)](https://travis-ci.org/michalkonturek/AutoDescribe)
 
-MKDebugKit provides enhanced debuggin tools for iOS applications.
-
-* [NSObject+AutoDescribe](#nsobjectautodescribe)
-* [MKLog](#mklog)
-
-
-## NSObject+AutoDescribe
+`AutoDescribe` is a category on `NSObject` which allows you to query information about an instance.
 
 This category extends `NSObject` with methods for acquisition of lists of properties and methods.
-It also enables objects to print their properties and values without the need of writing never-ending
-`NSLog` statements.
+It also enables objects to print their properties and values without the need of writing never-ending `NSLog` statements.
 
+
+## License
+
+Source code of this project is available under the standard MIT license. Please see [the license file][LICENSE].
+
+[PODS]:http://cocoapods.org/
+[LICENSE]:https://github.com/michalkonturek/AutoDescribe/blob/master/LICENSE
+
+
+## Installation
+
+The source files have been moved to `MKFoundationKit` pod. 
+
+1. Add to your Podfile:
+
+	```
+	pod 'MKFoundationKit/AutoDescribe'
+	```
+
+2. Import public header:
+
+	```
+	#import <MKFoundationKit/NSObject+MK_AutoDescribe.h>
+	```
+
+
+## API
 
 ```objc
-@interface TestDummy : NSObject
++ (NSArray *)mk_propertyList;
++ (NSArray *)mk_propertyList:(Class)clazz;
 
-+ (instancetype)create;
++ (NSArray *)mk_methodListOnly;
++ (NSArray *)mk_methodListOnly:(Class)clazz;
 
-@property (nonatomic, strong) NSString *propertyString;
-@property (nonatomic, strong) NSNumber *propertyNumber;
-@property (nonatomic, assign) NSInteger propertyInteger;
++ (NSArray *)mk_methodList;
++ (NSArray *)mk_methodList:(Class)clazz;
 
-- (void)method_no_parameter;
-- (void)method_one_parameter:(NSString *)parameter;
+- (void)mk_printObject;
+- (void)mk_printObjectKeys:(NSArray *)keys;
 
-@end
+- (void)mk_printObjectMethods;
+- (void)mk_printObjectMethodsOnly;
+
+- (NSString *)mk_className;
 ```
-
-```objc
-TestDummy *object = [[[self class] alloc] init];
-object.propertyInteger = 1;
-object.propertyNumber = @1;
-object.propertyString = @"String value";
-```
-
-
-## MKLog
-
-MKLog is a replacement for `NSLog`.
-
-
-<!--- - - 
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/michalkonturek/mkdebugkit/trend.png)](https://bitdeli.com/free "Bitdeli Badge")-->
-

@@ -1,4 +1,4 @@
-PROJECT_NAME=MKDebugKit
+PROJECT_NAME=AutoDescribe
 WORKSPACE=$(PROJECT_NAME).xcworkspace
 SCHEME=$(PROJECT_NAME)
 FLAGS=-sdk iphonesimulator

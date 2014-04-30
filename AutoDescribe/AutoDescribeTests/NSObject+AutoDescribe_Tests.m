@@ -1,6 +1,5 @@
 //
-//  NSObject+MKDebugKit_Tests.m
-//  MKDebugKit
+//  NSObject+AutoDescribe_Tests.m
 //
 //  Created by Michal Konturek on 20/10/2013.
 //  Copyright (c) 2013 Michal Konturek. All rights reserved.
@@ -8,13 +7,13 @@
 
 #import "Base_Test.h"
 
-@interface NSObject_MKDebugKit_Tests : XCTestCase
+@interface NSObject_AutoDescribe_Tests : XCTestCase
 
 @property (nonatomic, strong) TestDummy *test_dummy;
 
 @end
 
-@implementation NSObject_MKDebugKit_Tests
+@implementation NSObject_AutoDescribe_Tests
 
 - (void)setUp {
     [super setUp];

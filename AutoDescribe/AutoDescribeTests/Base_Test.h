@@ -11,7 +11,7 @@
 #define HC_SHORTHAND
 #import <OCHamcrest.h>
 
-#import "MKDebugKit.h"
+#import <MKFoundationKit/NSObject+MK_AutoDescribe.h>
 
 #import "TestDummy.h"
 
