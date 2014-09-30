@@ -1,3 +1,4 @@
+source 'https://github.com/CocoaPods/Specs.git'
 
 pod 'MKFoundationKit/AutoDescribe', '>= 1.2.0'
 
